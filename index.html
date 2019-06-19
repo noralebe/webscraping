@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+      <!-- <h2>{{mars.latest_news}}</h2> -->
+      <h4>Latest Mars News</h4>
+      <div class="caption"style="font-weight: bold;"></div>
+      <h4>{{mars.latest_news}}</h4>
+      <p>{{mars.paragraph}}</p>
+      </div>
+    </div>
+  </div>
+      <!-- <img src="{{ mars.featured_image }}" alt="Mars"/> -->
+    <!-- </div> -->
+  <!-- </div> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7">
+    <!-- Left box  -->
+        <!-- <div class="box"> -->
+          <div class="caption"style="font-weight: bold;">
+          <h4>Featured Mars Image</h4>
+          </div>
+      <!-- <h3 class="title">Summary: Latitude vs. X</h3> -->
+          <!-- <hr> -->
+          <img src="{{ mars.featured_image }}"  alt="Mars" style="width: 80%;">
+        <!-- </div> -->
+      </div>
+      <div class="col-md-5">
+    <!-- Right Box -->
+        <!-- <div class="box"> -->
+        <ul>
+            <div class="caption"style="font-weight: bold;">
+            <h4>Current Weather on Mars </h4>
+            </div>
+            {{mars.twitter_mars}}
+          
+        </ul>
+
+
+        <ul> 
+            <div class="caption"style="font-weight: bold;">
+            <h4>Mars Facts</h4>
+            </div>
+             {{mars.tables_mars | safe}}
+        </ul>                                              
+      </div> 
+    </div>
+  </div>                 
+      
+
+
+<br>
+
+
+      <div class="container">
+          <div class="col-md-12" align="center">
+          <div class="caption"style="font-weight: bold;">
+            <h1>Mars Hemispheres</h1>
+          </div>
+          </div>
+
+          <div class="body">
+          <div class="row">
+
+          <!-- <div class="row" style="padding-bottom: 30px;">  -->
+                 
+                  <div class="col-md-6">
+
+              
+                    <img class="panel" src="{{mars.hemisphere_mars_img.0.img_url}}" alt="Cerebus" style="width: 50%;">
+                    <div class="caption"style="font-weight: bold;">
+                        <p>{{mars.hemisphere_mars_img.0.title}}</p>
+                    </div>
+           
+                  </div>
+                  <div class="col-md-6"> 
+              
+                    <img class="panel" src="{{mars.hemisphere_mars_img.1.img_url}}" alt="Schiaparell" style="width: 50%;">
+                    <div class="caption"style="font-weight: bold;">
+                        <p>{{mars.hemisphere_mars_img.1.title}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      
+                    <img class="panel" src="{{mars.hemisphere_mars_img.2.img_url}}" alt="Syrtis" style="width: 50%;">
+                    <div class="caption"style="font-weight: bold;">
+                        <p>{{mars.hemisphere_mars_img.2.title}}</p>
+                    </div> 
+                     
+                  </div>
+                      
+                  <div class="col-md-6">
+                    
+                    <img class="panel" src="{{mars.hemisphere_mars_img.3.img_url}}" alt="Valles" style="width: 50%;">
+                    <div class="caption"style="font-weight: bold;">
+                         <p>{{mars.hemisphere_mars_img.3.title}}</p>
+                    </div>
+                  </div>
+           
+          </div>
+          </div> 
+      </div> 
+</body>
+</html> 
+<!-- <br>
+<div class="container-fluid">
+    <h7 class="card-title">Mars Hemisphers</h7>
+         <H7 align="center">Mars Hemispheres</H7>  -->
+                            <!-- <H7 align="center">Mars Hemispheres</H7> -->
+      <!-- <h7 class="heading text-center">Mars Hemispheres</h7> -->
+        <!-- <div class="row">
+          <div class="col-lg-3">
+          </div>
+          <div class="col-lg-3">
+            <div class="card" style="width: 20rem;">
+        -->
+                <!-- <img class="card-img-top" src="{{mars.hemisphere_mars_img.0.img_url}}" width=200px alt="Cerebus">
+ 
+              <div class="card-body">
+                  <h8 class="card-text text-center">{{mars.hemisphere_mars_img.0.title}}</h8>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card" style="width: 20rem;"> -->
+        
+                <!-- <img class="card-img-top" src="{{ mars.hemisphere_mars_img.1.img_url}}" width=200px alt="Schiaparell">
+   
+              <div class="card-body">
+                  <h9 class="card-text text-center">{{mars.hemisphere_mars_img.1.title}}</h9>
+              </div>
+            </div>
+          </div>
+        </div> -->
+<!-- <br>
+        <div class="row">
+          <div class="col-lg-3">
+          </div>
+          <div class="col-lg-3">
+            <div class="card" style="width: 20rem;">
+  
+                <img class="card-img-top" src="{{mars.hemisphere_mars_img.2.img_url}}" width=200px alt="Syrtis">
+   
+              <div class="card-body">
+                  <h10 class="card-text text-center">{{mars.hemisphere_mars_img.2.title}}</h10>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card" style="width: 20rem;"> -->
+       
+                <!-- <img class="card-img-top" src="{{mars.hemisphere_mars_img.2.img_url}}" width=200px alt="Valles">
+   
+              <div class="card-body">
+                  <h11 class="card-text text-center">{{mars.hemisphere_mars_img.3.title}}</h11>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+</body>
+
+</html> --> 
